@@ -169,7 +169,15 @@
       // 🧠 The "tail" prop contains an array holding the elements of the array after the first one.
       // 🧠 Examples of usage:
       // headAndTail([1, 2, 3]) // should return { head: 1, tail: [2, 3] }
-      function headAndTail() {}
+      function headAndTail(arr) {
+        let headAndTailObj = {};
+        headArr = arr.slice(0, 1);
+        console.log(headArr);
+        tailArr = arr.slice(1);
+        headAndTailObj.head = headArr[0];
+        headAndTailObj.tail = tailArr;
+        return headAndTailObj;
+      }
 
       // 👉 CHALLENGE 8
       // 🧠 The function nestedLoops takes an array of strings as its argument.
