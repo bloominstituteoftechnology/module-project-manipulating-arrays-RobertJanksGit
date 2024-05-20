@@ -34,7 +34,19 @@
       // ❗ Notes:
       // 🧠 There are many ways to solve this, but practice using a for loop to iterate over the array.
       // 🧠 As you have done in the past, declare a variable before you start looping, to accumulate the result.
-      function sumNumsFor(nums) {}
+      function sumNumsFor(nums) {
+        let accumulator = 0;
+        for (let index = 0; index < nums.length; index++) {
+          if (typeof nums[index] === "number") {
+            accumulator += nums[index];
+          }
+          if (nums[index] === 13) {
+            accumulator = "I'm too superstitious!";
+            break;
+          }
+        }
+        return accumulator;
+      }
 
       // 👉 CHALLENGE 2
       // 🧠 The function stripVowels takes a string, strips all lowcase vowel letters (a,e,i,o,u) from it and returns it.
