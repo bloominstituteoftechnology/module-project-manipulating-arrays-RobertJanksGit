@@ -172,7 +172,6 @@
       function headAndTail(arr) {
         let headAndTailObj = {};
         headArr = arr.slice(0, 1);
-        console.log(headArr);
         tailArr = arr.slice(1);
         headAndTailObj.head = headArr[0];
         headAndTailObj.tail = tailArr;
@@ -186,7 +185,29 @@
       // nestedLoops(['hello', 'goodbye']) // should return ['hEllO', 'gOOdbyE']
       // ❗ Notes:
       // 🧠 To capitalize a string you can use its toUpperCase method: "a".toUpperCase() returns "A"
-      function nestedLoops() {}
+      function nestedLoops(strArr) {
+        let newVar = [];
+        const targetArray = [];
+        for (let index in strArr) {
+          let testVar = strArr[index];
+          for (let i = 0; i < testVar.length; i++) {
+            if (
+              testVar[i] === "a" ||
+              testVar[i] === "e" ||
+              testVar[i] === "i" ||
+              testVar[i] === "o" ||
+              testVar[i] === "u"
+            ) {
+              newVar.push(testVar[i].toUpperCase());
+            } else {
+              newVar.push(testVar[i]);
+            }
+          }
+          targetArray.push(newVar.join(""));
+          newVar = [];
+        }
+        return targetArray;
+      }
 
       // 👉 CHALLENGE 9
       // 🧠 The function crazyTrimmer takes an array as its argument.
