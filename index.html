@@ -219,7 +219,17 @@
       // ❗ Notes:
       // 🧠 Practice using pop and slice.
       // 🧠 Note that pop modifies the original array in place and returns the "popped" element, whereas slice gives us a brand new array.
-      function crazyTrimmer(arr) {}
+      function crazyTrimmer(arr) {
+        let sliced;
+        if (arr.length % 2 === 0) {
+          sliced = arr.slice(0, arr.length - 1);
+          return sliced;
+        } else {
+          arr.pop();
+          arr.shift();
+          return arr;
+        }
+      }
 
       // 🧪 TESTS, do not work below this line
       // 🧪 TESTS, do not work below this line
